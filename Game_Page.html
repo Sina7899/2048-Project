@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(2048) Project</title>
+    <link rel="stylesheet" href="./Game_Page.Style.css" />
+    <link rel="icon" type="image/x-icon" href="../Assets/Page Icon 3.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="score_board">
+        <div class="player_info">
+          <img
+            id="player_avatar"
+            src=""
+            onload="javascript: console.log(`Avatar Loaded.`)"
+            onerror="javascript: console.log(`Avatar Not Loaded.`)"
+            alt="Player Picture"
+          />
+          <span id="player_name"></span>
+        </div>
+        <div class="sb_buttons">
+          <button id="home">Home</button>
+          <button id="new_game">New Game</button>
+        </div>
+        <div class="score">
+          <p>Score:<span id="score"></span></p>
+          <p>Best:<span id="best"></span></p>
+        </div>
+      </section>
+      <section class="main_game">
+        <h1>2048</h1>
+        <div id="game_board">
+          <span>
+            <div id="cell_1" class="cell_color_default"></div>
+            <div id="cell_2" class="cell_color_default"></div>
+            <div id="cell_3" class="cell_color_default"></div>
+            <div id="cell_4" class="cell_color_default"></div>
+          </span>
+          <span>
+            <div id="cell_5" class="cell_color_default"></div>
+            <div id="cell_6" class="cell_color_default"></div>
+            <div id="cell_7" class="cell_color_default"></div>
+            <div id="cell_8" class="cell_color_default"></div>
+          </span>
+          <span>
+            <div id="cell_9" class="cell_color_default"></div>
+            <div id="cell_10" class="cell_color_default"></div>
+            <div id="cell_11" class="cell_color_default"></div>
+            <div id="cell_12" class="cell_color_default"></div>
+          </span>
+          <span>
+            <div id="cell_13" class="cell_color_default"></div>
+            <div id="cell_14" class="cell_color_default"></div>
+            <div id="cell_15" class="cell_color_default"></div>
+            <div id="cell_16" class="cell_color_default"></div>
+          </span>
+        </div>
+      </section>
+      <section class="buttons">
+        <div>
+          <button class="game_button">
+            <span class="material-symbols-outlined" id="up">
+              arrow_upward_alt
+            </span>
+          </button>
+        </div>
+        <div>
+          <button class="game_button">
+            <span class="material-symbols-outlined" id="left">
+              arrow_left_alt
+            </span>
+          </button>
+          <button class="game_button">
+            <span class="material-symbols-outlined" id="down">
+              arrow_downward_alt
+            </span>
+          </button>
+          <button class="game_button">
+            <span class="material-symbols-outlined" id="right">
+              arrow_right_alt
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <article class="game_over_page" id="gameOver_page">
+      <div>
+        <h2>Game over</h2>
+        <hr />
+      </div>
+      <div id="go_info">
+        <img
+          id="go_player_avatar"
+          src=""
+          onload="javascript: console.log(`Avatar Loaded.`)"
+          onerror="javascript: console.log(`Avatar Not Loaded.`)"
+          alt="Player Picture"
+        />
+        <span id="go_player_name"></span>
+        <p id="new_best">New Best Score!</p>
+        <div id="go_scores">
+          <p>Score:<span id="go_score"></span></p>
+          <p>Best:<span id="go_best"></span></p>
+        </div>
+      </div>
+      <div class="sb_buttons" id="go_buttons">
+        <button id="go_home">Home</button>
+        <button id="go_new_game">Play Again</button>
+      </div>
+    </article>
+    <script type="module" src="./Game_Page_Script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  height: auto;
+  min-height: 600px;
+  width: auto;
+  min-width: 550px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(108, 176, 231);
+  border-radius: 12px;
+}
+
+section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: xx-large;
+  margin-bottom: 8px;
+}
+
+.header hr {
+  height: 3px;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.player_info {
+  height: 80px;
+  min-width: 100%;
+  padding: 16px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+}
+
+.player_info div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#input_and_info {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+#player_profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.player_info p {
+  font-size: 11px;
+  font-weight: 700;
+  display: grid;
+}
+
+.player_info img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.player_info input {
+  height: 25px;
+  width: 100px;
+  border: 2px solid;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+#start_butt {
+  font-family: inherit;
+  font-size: 12px;
+  color: white;
+  font-weight: bolder;
+  margin-left: 28px;
+  height: 32px;
+  width: 84px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: rgb(13, 58, 126);
+}
+
+#start_butt:hover {
+  cursor: pointer;
+}
+
+.leaderboard {
+  height: auto;
+  min-height: 200px;
+  width: 80%;
+  background-color: aliceblue;
+  border-radius: 12px;
+  justify-content: start;
+  padding: 16px;
+}
+
+#lb_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#lb_header h2 {
+  font-size: larger;
+  margin-bottom: 8px;
+}
+
+#lb_header h2 span {
+  font-size: 12px;
+}
+
+#lb_header hr {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+
+#lb_main {
+  height: auto;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lb_des {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.lb_des p {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+@media screen and (width<500px) {
+  main {
+    width: 80%;
+    min-width: 350px;
+    padding: 18px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  #input_and_info {
+    gap: 28px;
+  }
+
+  .player_info p {
+    font-size: 10px;
+  }
+
+  .player_info input {
+    height: 20px;
+    width: 70px;
+  }
+
+  ::placeholder {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .player_info img {
+    height: 38px;
+    width: 38px;
+  }
+
+  #player_name {
+    font-size: 14px;
+  }
+
+  #start_butt {
+    font-size: 10px;
+    color: white;
+    font-weight: bolder;
+    margin-left: 28px;
+    height: 28px;
+    width: 68px;
+  }
+
+  #lb_header h2 {
+    font-size: 14px;
+  }
+
+  #lb_header h2 span {
+    font-size: 10px;
+  }
+
+  .lb_des p {
+    font-size: 13px;
+  }
+
+  #list_name li {
+    font-size: 13px;
+  }
+
+  .lb_des span {
+    font-size: 13px;
+  }
+}

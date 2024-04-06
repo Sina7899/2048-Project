@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard page</title>
+    <link rel="stylesheet" href="./Home_Page_Style.css" />
+    <link rel="icon" type="image/x-icon" href="../Assets/Page Icon 3.png" />
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1>2048</h1>
+        <hr />
+      </section>
+      <section class="player_info">
+        <div id="input_and_info">
+          <p>
+            Enter Your Name:
+            <input
+              placeholder="Press Enter"
+              for="name"
+              type="text"
+              id="input_name"
+              name="player name"
+              required
+              spellcheck="false"
+            />
+          </p>
+          <div id="player_profile">
+            <img
+              id="player_avatar"
+              src=""
+              onload="javascript: console.log(`Avatar Loaded.`)"
+              onerror="javascript: console.log(`Avatar Not Loaded.`)"
+              alt="Player Picture"
+            />
+            <span id="player_name"></span>
+          </div>
+        </div>
+        <div>
+          <button id="start_butt">Start Game</button>
+        </div>
+      </section>
+      <section class="leaderboard">
+        <div id="lb_header">
+          <h2>Leaderboard <span>(Top5)</span></h2>
+          <hr />
+        </div>
+        <div id="lb_main">
+          <div class="lb_des">
+            <p>Name</p>
+            <ol id="list_name"></ol>
+          </div>
+          <div class="lb_des" id="lb_score">
+            <p>Score</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./Home_Page_Script.js"></script>
+  </body>
+</html>

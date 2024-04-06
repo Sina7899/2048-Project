@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  height: 80%;
+  width: 40%;
+  min-height: 600px;
+  min-width: 450px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(108, 176, 231);
+  border-radius: 12px;
+}
+
+section {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  min-height: auto;
+  min-width: auto;
+  display: flex;
+  align-content: center;
+  justify-items: center;
+}
+
+div {
+  margin: 5px;
+  min-height: 60px;
+  min-width: 60px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.cell_color_default {
+  border: 2px solid;
+}
+
+.cell_color_2 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(179, 211, 247);
+}
+
+.cell_color_4 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(136, 187, 245);
+}
+
+.cell_color_8 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(82, 155, 240);
+}
+
+.cell_color_16 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(62, 128, 202);
+}
+
+.cell_color_32 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(19, 127, 250);
+}
+
+.cell_color_64 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(35, 95, 163);
+}
+
+.cell_color_128 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(3, 64, 134);
+}
+
+.cell_color_256 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(20, 50, 83);
+}
+
+.cell_color_512 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(50, 52, 54);
+}
+
+.cell_color_1024 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(12, 17, 24);
+}
+
+.cell_color_2048 {
+  border: none;
+  color: rgb(253, 253, 253);
+  background-color: rgb(0, 0, 0);
+}
+
+.score_board {
+  height: 100px;
+  width: 350px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background-color: rgb(253, 253, 253);
+  border-radius: 12px;
+}
+
+.player_info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-right: 48px;
+}
+
+.player_info img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.avatar_animation {
+  animation: avatarAnimation 2000ms linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes avatarAnimation {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.sb_buttons {
+  height: auto;
+  width: auto;
+  margin-right: 48px;
+}
+
+.sb_buttons button {
+  font-family: inherit;
+  font-size: x-small;
+  font-weight: 700;
+  color: azure;
+  height: 30px;
+  width: 65px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(13, 58, 126);
+}
+
+.sb_buttons button:hover {
+  cursor: pointer;
+}
+
+#home {
+  margin-bottom: 4px;
+}
+
+.score {
+  place-items: unset;
+  width: 80px;
+}
+
+.main_game {
+  height: 350px;
+  width: 350px;
+  border-radius: 12px;
+  background-color: rgb(253, 253, 253);
+}
+
+#game_board {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.buttons div {
+  height: 40px;
+  min-height: auto;
+  width: 120px;
+  border: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  height: 40px;
+  width: 40px;
+  border: 1px solid;
+  border-radius: 5px;
+  color: black;
+  background-color: rgb(253, 253, 253);
+}
+
+.buttons button span {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game_over_page {
+  position: absolute;
+  height: 80%;
+  width: 40%;
+  min-height: 600px;
+  min-width: 450px;
+  background-color: rgb(108, 176, 231);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.game_over_page div {
+  height: auto;
+  width: 100%;
+  margin: 0;
+}
+
+article hr {
+  height: 3px;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+#go_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  height: 300px;
+  width: 90%;
+  min-width: 200px;
+  background-color: rgb(253, 253, 253);
+}
+
+#go_info img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+}
+
+#new_best {
+  display: none;
+  color: red;
+  font-size: 13px;
+  animation: bestAlert 1100ms ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bestAlert {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#go_score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#go_buttons {
+  margin-top: 64px;
+  gap: 8px;
+}
+
+#go_scores {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#go_scores p {
+  font-size: large;
+}
+
+@media screen and (width<500px) {
+  main {
+    min-width: 350px;
+  }
+
+  .score_board {
+    height: 80px;
+    width: 100%;
+    padding: 8px 16px;
+  }
+
+  .score_board span {
+    font-size: 11px;
+  }
+
+  .player_info img {
+    height: 38px;
+    width: 38px;
+    margin-right: 4px;
+  }
+
+  .sb_buttons button {
+    font-size: 8px;
+    font-weight: 700;
+    height: 25px;
+    width: 55px;
+  }
+
+  .score p {
+    font-size: 11px;
+  }
+
+  .main_game {
+    height: 300px;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .main_game h1 {
+    font-size: larger;
+  }
+
+  div {
+    margin: 5px;
+    min-height: 50px;
+    min-width: 50px;
+  }
+
+  .game_over_page {
+    min-width: 350px;
+  }
+}
